@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto";
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.6;
+}
+p {
+  text-align: left;
+}
+i {
+  font-size: 20px;
+}
+/* Conatiner */
+.container {
+  margin: 5rem auto;
+  width: 30rem;
+  height: 50rem;
+  color: white;
+  text-align: center;
+
+  background-color: #131212;
+  box-shadow: 0.3rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.8rem;
+
+  display: grid;
+  grid-template-rows: repeat(8, 4fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+/* Top Menu Bar */
+.top_menu-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-area: 1/1/2/-1;
+}
+.top_menu-bar p {
+  font-size: 1.5rem;
+}
+/* Side Menu Bar */
+.side_menu-bar {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 10px;
+  grid-gap: 10px;
+  grid-area: 2/4/8/5;
+}
+/* Textarea */
+.textarea {
+  padding: 1.5rem;
+  grid-area: 7/1/8/4;
+}
+/* Bottom Menu Bar */
+.bottom_menu-bar {
+  background-color: gray;
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  grid-area: 8 / 1/ 9 /-1;
+}
+.bottom_menu-bar .fa-square-plus {
+  font-size: 4rem;
+}
+.item {
+  cursor: pointer;
+  align-self: center;
+  justify-self: center;
+}
+/* Video Controller */
+.video_container {
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+  grid-area: 1 / 1/ 9 /-1;
+}
+.video_tag {
+  scroll-snap-align: start;
+}
+::-webkit-scrollbar {
+  display: none;
+}
